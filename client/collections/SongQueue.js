@@ -3,6 +3,7 @@ var SongQueue = Songs.extend({
 
   initialize: function(songData){
     this.on('ended',function(){
+      //console.log(this.models[0])
       this.remove(this.models[0]);
       if(this.models.length){
         this.playFirst();
